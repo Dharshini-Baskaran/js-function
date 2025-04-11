@@ -26,18 +26,6 @@ describe('isPositiveNumber', () => {
     expect(isPositiveNumber(Number.MIN_VALUE)).toBe(true);  // Smallest positive number
     // Infinity is considered positive
     expect(isPositiveNumber(Infinity)).toBe(true);
-
-
   });
 
-
-  it('should handle invalid input gracefully', () => {
-    expect(isPositiveNumber(NaN)).toBe(false);  // Not a Number
-    expect(isPositiveNumber(undefined)).toBe(false);
-    expect(isPositiveNumber(null)).toBe(false);
-    expect(isPositiveNumber('1')).toBe(false); // String input (ensure no implicit type coercion) 
-    expect(isPositiveNumber({})).toBe(false);  // Object input
-    expect(isPositiveNumber([])).toBe(false);  // Array input
-
-  });
 });

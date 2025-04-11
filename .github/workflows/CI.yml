@@ -25,3 +25,15 @@ jobs:
 
       - name: Run Tests
         run: npm test
+
+      - name: Run Jest tests
+        run: npx jest --coverage
+
+      - name: Run Mutation Testing with Stryker
+        run: npx stryker run
+
+      - name: Upload Mutation Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: stryker-report
+          path: reports/mutation/html

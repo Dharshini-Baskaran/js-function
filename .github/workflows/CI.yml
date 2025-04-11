@@ -37,16 +37,5 @@ jobs:
       - name: Run Performance Tests
         run: node performance.js
 
-      - name: Upload Coverage Report
-        uses: actions/upload-artifact@v2  # Use v3 if working, else fallback to v2
-        with:
-          name: coverage-report
-          path: coverage/
-
-      - name: Upload Stryker Mutation Report
-        uses: actions/upload-artifact@v2
-        with:
-          name: mutation-report
-          path: reports/
-
+     
       

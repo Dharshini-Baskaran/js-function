@@ -3,5 +3,7 @@ module.exports = {
     testEnvironment: "node",
     detectOpenHandles: true,
     logHeapUsage: true,
+    collectCoverage: true,
+    coverageDirectory: 'coverage',  
   };
   

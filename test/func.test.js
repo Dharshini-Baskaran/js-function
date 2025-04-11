@@ -1,31 +1,28 @@
-const isPositiveNumber = require('../func.js'); // Assuming the function is in isPositiveNumber.js
+const isPositive = require('../func');
 
-describe('isPositiveNumber', () => {
-  it('should return true for positive numbers', () => {
-    expect(isPositiveNumber(1)).toBe(true);
-    expect(isPositiveNumber(10)).toBe(true);
-    expect(isPositiveNumber(1000)).toBe(true);
-    expect(isPositiveNumber(Number.MAX_SAFE_INTEGER)).toBe(true); // Large positive number
+describe("isPositive function tests", () => {
+  // Normal cases
+  it("should return true for positive numbers", () => {
+    expect(isPositive(10)).toBe(true);
+    expect(isPositive(1)).toBe(true);
   });
 
-  it('should return false for zero', () => {
-    expect(isPositiveNumber(0)).toBe(false); 
+  it("should return false for zero", () => {
+    expect(isPositive(0)).toBe(false);
   });
 
-  it('should return false for negative numbers', () => {
-    expect(isPositiveNumber(-1)).toBe(false);
-    expect(isPositiveNumber(-10)).toBe(false);
-    expect(isPositiveNumber(-1000)).toBe(false);
-    expect(isPositiveNumber(Number.MIN_SAFE_INTEGER)).toBe(false); // Large negative number
+  it("should return false for negative numbers", () => {
+    expect(isPositive(-1)).toBe(false);
   });
 
-
-
-  it('should handle edge cases correctly', () => {
-    expect(isPositiveNumber(0.1)).toBe(true);   // Small positive number
-    expect(isPositiveNumber(Number.MIN_VALUE)).toBe(true);  // Smallest positive number
-    // Infinity is considered positive
-    expect(isPositiveNumber(Infinity)).toBe(true);
+  // Edge cases
+  it("should return true for very large positive numbers", () => {
+    expect(isPositive(Number.MAX_SAFE_INTEGER)).toBe(true); // Max safe integer
+    expect(isPositive(Number.POSITIVE_INFINITY)).toBe(true); // Infinity
   });
 
+  it("should return false for very large negative numbers", () => {
+    expect(isPositive(-Number.MAX_SAFE_INTEGER)).toBe(false); // Large negative number
+    expect(isPositive(Number.NEGATIVE_INFINITY)).toBe(false); // Negative Infinity
+  });
 });

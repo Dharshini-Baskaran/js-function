@@ -12,10 +12,10 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v2
         with:
           node-version: 18
 
@@ -38,25 +38,25 @@ jobs:
         run: node performance.js
 
       - name: Upload Coverage Report
-        uses: actions/upload-artifact@v3  # Use v3 if working, else fallback to v2
+        uses: actions/upload-artifact@v2  # Use v3 if working, else fallback to v2
         with:
           name: coverage-report
           path: coverage/
 
       - name: Upload Stryker Mutation Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: mutation-report
           path: reports/
 
       - name: Upload Jest Test Results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: test-results
           path: test/
 
       - name: Upload reports
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: test-reports
           path: reports/

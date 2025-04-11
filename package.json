@@ -1,0 +1,26 @@
+{
+  "name": "js-function",
+  "version": "1.0.0",
+  "description": "",
+  "main": "func.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dharshini-Baskaran/js-function.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dharshini-Baskaran/js-function/issues"
+  },
+  "homepage": "https://github.com/Dharshini-Baskaran/js-function#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

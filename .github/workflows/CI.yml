@@ -38,7 +38,7 @@ jobs:
         run: node performance.js
 
       - name: Upload Coverage Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3  # Use v3 if working, else fallback to v2
         with:
           name: coverage-report
           path: coverage/
@@ -54,3 +54,9 @@ jobs:
         with:
           name: test-results
           path: test/
+
+      - name: Upload reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-reports
+          path: reports/

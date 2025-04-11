@@ -1,4 +1,4 @@
-const isPositiveNumber = require('js-function/func.js'); // Assuming the function is in isPositiveNumber.js
+const isPositiveNumber = require('../func.js'); // Assuming the function is in isPositiveNumber.js
 
 describe('isPositiveNumber', () => {
   it('should return true for positive numbers', () => {

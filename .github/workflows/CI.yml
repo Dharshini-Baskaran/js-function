@@ -37,5 +37,9 @@ jobs:
       - name: Run Performance Tests
         run: node performance.js
 
+      - name: Fix Permissions
+        run: sudo chmod -R 755 node_modules/.bin
+      
+
      
       

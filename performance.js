@@ -1,8 +1,8 @@
-const { exec } = require('child_process');
-const { performance } = require('perf_hooks');
+const { exec } = require("child_process");
+const { performance } = require("perf_hooks");
 
 // Path to your test file
-const testFilePath = 'test/func.test.js';  // Adjust if needed
+const testFilePath = "test/func.test.js"; // Adjust if needed
 
 const start = performance.now();
 

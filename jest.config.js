@@ -1,9 +1,8 @@
 module.exports = {
-    verbose: true,
-    testEnvironment: "node",
-    detectOpenHandles: true,
-    logHeapUsage: true,
-    collectCoverage: true,
-    coverageDirectory: 'coverage',  
-  };
-  
+  verbose: true,
+  testEnvironment: "node",
+  detectOpenHandles: true,
+  logHeapUsage: true,
+  collectCoverage: true,
+  coverageDirectory: "coverage",
+};

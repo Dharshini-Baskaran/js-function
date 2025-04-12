@@ -1,4 +1,4 @@
-const isPositive = require('../func');
+const isPositive = require("../func");
 
 describe("isPositive function tests", () => {
   // Normal cases

@@ -21,30 +21,24 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
-        
+
       - name: Fix Permissions for All Local Binaries
         run: chmod -R +x ./node_modules/.bin
-        
+
       - name: Debug Bin Folder (Optional)
         run: ls -l ./node_modules/.bin
-        
+
       - name: Run ESLint (Readability)
-        run: ./node_modules/.bin/eslint . --ext .js,.mjs     
-           
+        run: ./node_modules/.bin/eslint . --ext .js,.mjs
+
       - name: Run Prettier (Maintainability)
         run: ./node_modules/.bin/prettier --check "**/*.js"
-        
+
       - name: Run Jest (Coverage)
         run: ./node_modules/.bin/jest --coverage
-        
+
       - name: Run Stryker (Mutation Testing)
         run: ./node_modules/.bin/stryker run
-        
+
       - name: Run Performance Tests
         run: node performance.js
-        
-      
-      
-
-     
-      

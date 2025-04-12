@@ -23,7 +23,8 @@ jobs:
         run: npm install
 
       - name: Run ESLint (Readability)
-        run: npx eslint . --ext .js,.mjs
+        run: ./node_modules/.bin/eslint . --ext .js,.mjs
+      
 
       - name: Run Prettier (Maintainability)
         run: npx prettier --check "**/*.js"
@@ -37,8 +38,13 @@ jobs:
       - name: Run Performance Tests
         run: node performance.js
 
-      - name: Fix Permissions
-        run: sudo chmod -R 755 node_modules/.bin
+      - name: Fix ESLint Permission
+        run: chmod +x ./node_modules/.bin/eslint
+
+      - name: Debug ESLint Path
+        run: ls -l ./node_modules/.bin
+      
+      
       
 
      

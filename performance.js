@@ -11,10 +11,14 @@ exec(`npx jest ${testFilePath}`, (error, stdout, stderr) => {
   const duration = (end - start).toFixed(2);
 
   console.log(stdout);
-  if (error || stderr) {
-    console.error("❌ Error during test execution:");
-    console.error(error || stderr);
+  if (error) {
+    console.error("❌ Test execution failed:");
+    console.error(error.message);
   }
-
-  console.log(`⏱️ Total execution time: ${duration} ms`);
+  if (stderr) {
+    console.warn("⚠️ stderr output:");
+    console.warn(stderr);
+  }
+  
+  
 });

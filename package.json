@@ -13,7 +13,6 @@
     "test:performance": "node performance.js",
     "test:all": "npm run test:coverage && npm run test:mutation && npm run test:performance"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Dharshini-Baskaran/js-function.git"

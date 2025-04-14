@@ -5,5 +5,5 @@ module.exports = {
   logHeapUsage: true,
   collectCoverage: true,
   coverageDirectory: "coverage",
-  collectCoverageFrom: ['func.js', 'func.test.js'],
+  collectCoverageFrom: ["func.js", "func.test.js"],
 };

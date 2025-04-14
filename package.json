@@ -12,7 +12,7 @@
     "test:mutation": "stryker run",
     "test:performance": "node performance.js",
     "lint": "eslint .",
-    "format": "prettier --check .",
+    "format": "prettier --write .",
     "test:all": "npm run lint && npm run format && npm run test:coverage && npm run test:mutation && npm run test:performance"
   },
   "repository": {
